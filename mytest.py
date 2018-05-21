@@ -61,7 +61,7 @@ class Net(nn.Module):
         res4 = pos * off.expand_as(pos)
         off_1, off_2, off_3, off_4 = torch.split(res4, 1, 1)
 
-        return x + off_1 + off_2 + off_3 + off_4
+        return x + off_1 + off_2 + off_3 + off_4, off
 
 
 def test(input, label, wid, hei):
@@ -97,7 +97,14 @@ def test(input, label, wid, hei):
     LR_lab_torch.unsqueeze_(0)
     LR_lab_torch = Variable(LR_lab_torch.cuda())
 
-    pred = model(LR_img_torch, LR_lab_torch)
+    recon, offset = model(LR_img_torch, LR_lab_torch)
+    temp_recon = recon.cpu()
+    recon_numpy = np.array(temp_recon.data.numpy())
+    recon_numpy = np.array(recon_numpy, dtype=np.int32)
+
+    temp_offset = offset.cpu()
+    offset_numpy = np.array(temp_offset.data.numpy())
+    offset_numpy = np.array(offset_numpy, dtype=np.int32)
 
     offset = np.array([1, 0, 0, 0])
 
