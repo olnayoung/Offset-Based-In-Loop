@@ -100,14 +100,31 @@ def test(input, label, wid, hei):
     recon, offset = model(LR_img_torch, LR_lab_torch)
     temp_recon = recon.cpu()
     recon_numpy = np.array(temp_recon.data.numpy())
-    recon_numpy = np.array(recon_numpy, dtype=np.int32)
+    recon_numpy = np.array(recon_numpy[0,0,:,:], dtype=np.int32)
 
     temp_offset = offset.cpu()
     offset_numpy = np.array(temp_offset.data.numpy())
-    offset_numpy = np.array(offset_numpy, dtype=np.int32)
+    offset_numpy = np.array(offset_numpy[0,:,0,0], dtype=np.int32)
 
     offset = np.array([1, 0, 0, 0])
 
     input_re = input_re.tolist()
     offset = offset.tolist()
-    return offset, input_re
+    recon_numpy = recon_numpy.tolist()
+    offset_numpy = offset_numpy.tolist()
+    return offset, recon_numpy
+    # return offset_numpy, recon_numpy
+
+a = np.random.rand(64*64)*255
+b = np.random.rand(64*64)*255
+
+offset, recon = test(a, b, 64, 64)
+
+# print(type(offset))
+# print(type(recon))
+print(offset)
+print(recon[0][0:10])
+# print(len(recon))
+# print(len(recon[0]))
+# print(offset.shape())
+# print(recon.shape())
