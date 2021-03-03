@@ -11,6 +11,11 @@ network computes the optimal offset values while another part estimates the type
 complicated errors compared to conventional deep- learning-based schemes. Experimental results show that the proposed system yields an average bit-rate saving of 4.2% and 2.8% for the low-delay P and random
 access modes, respectively, compared to the conventional HEVC. Moreover, the performance improvement is up to 6.3% and 3.9% for higher-resolution sequences.
 
+| |encoder|decoder|
+|---|---|---|
+|original|[o_encoder](figs/original_encoder.PNG)|[o_decoder](figs/original_decoder.PNG)
+|modified|[m_encoder](figs/modified_encoder.PNG)|[m_decoder](figs/modified_decoder.PNG)
+
 
 ## Weights
 There are pre-trained weights up there, named [LDP_QP27.pt](LDP_QP27.pt), which is for Low Delay P (LDP) and QP 27.
