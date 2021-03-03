@@ -16,6 +16,10 @@ access modes, respectively, compared to the conventional HEVC. Moreover, the per
 |original|![o_encoder](figs/original_encoder.PNG)|![o_decoder](figs/original_decoder.PNG)
 |modified|![m_encoder](figs/modified_encoder.PNG)|![m_decoder](figs/modified_decoder.PNG)
 
+| |Networks|
+|---|---|
+|encoder|![e_Net](figs/encoder_network.PNG)
+|decoder|![d_Net](figs/decoder_network.PNG)
 
 ## Weights
 There are pre-trained weights up there, named [LDP_QP27.pt](LDP_QP27.pt), which is for Low Delay P (LDP) and QP 27.
