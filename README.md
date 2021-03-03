@@ -1,6 +1,6 @@
 # Offset-Based In-Loop Filtering With a Deep Network in HEVC
 
-## So Yoon Lee; Yoonmo Yang; Dongsin Kim; Seunghyun Cho; Byung Tae Oh
+**So Yoon Lee; Yoonmo Yang; Dongsin Kim; Seunghyun Cho; Byung Tae Oh**
 
 In our recent [paper](https://ieeexplore.ieee.org/abstract/document/9272307), we proposed Offset-Based In-Looop Filtering.
 
