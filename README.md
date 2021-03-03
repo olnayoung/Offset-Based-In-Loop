@@ -13,8 +13,8 @@ access modes, respectively, compared to the conventional HEVC. Moreover, the per
 
 | |encoder|decoder|
 |---|---|---|
-|original|[o_encoder](figs/original_encoder.PNG)|[o_decoder](figs/original_decoder.PNG)
-|modified|[m_encoder](figs/modified_encoder.PNG)|[m_decoder](figs/modified_decoder.PNG)
+|original|![o_encoder](figs/original_encoder.PNG)|![o_decoder](figs/original_decoder.PNG)
+|modified|![m_encoder](figs/modified_encoder.PNG)|![m_decoder](figs/modified_decoder.PNG)
 
 
 ## Weights
